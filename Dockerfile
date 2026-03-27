@@ -4,7 +4,7 @@ COPY . /app
 
 WORKDIR /app
 
-RUN npm install && npm run build
+RUN npm install && ./node_modules/.bin/tsc
 
 FROM node:22-alpine AS release
 
